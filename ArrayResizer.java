@@ -33,6 +33,15 @@ return rows;
      * at least one row with no zeros.
      * Postcondition: array2D is unchanged.
      */
-   // public static int[][] resize(int[][] array2D) {
-    //    /* to be implemented in part (b) */ }
+    public static int[][] resize(int[][] array2D) {
+    int rows =numNonZeroRows(array2D);
+    int cols = array2D[0].length;
+    int[][] arr = new int[rows][cols];
+    int r = 0;
+    for(int row = 0; row<array2D.length; row++){
+        if(isNonZeroRow(array2D,row)){
+         arr[r] = array2D[row];
+          r++;}
+    }
+    return arr;}
 }

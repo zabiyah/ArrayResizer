@@ -5,5 +5,11 @@ public class Main{
         System.out.println(ArrayResizer.isNonZeroRow(arr, 1));
         System.out.println(ArrayResizer.isNonZeroRow(arr, 2));
         System.out.println(ArrayResizer.isNonZeroRow(arr, 3));
+        int[][]result = ArrayResizer.resize((arr));
+        for(int[]row:result){
+            for(int col:row){
+            System.out.println(col+" ");}
+        }
+        System.out.println();
     }
 }
